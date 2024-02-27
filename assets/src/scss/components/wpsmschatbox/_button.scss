@@ -1,0 +1,54 @@
+.wpsms-chatbox__button {
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  @extend .u-flex--center;
+  @extend .u-bold;
+
+  &-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  &-bobbles-title {
+    @extend .u-bold;
+  }
+
+  &-arrow {
+    display: none;
+  }
+
+  &-title {
+    margin: 0 .3rem;
+  }
+
+  &--has-arrow {
+    padding-right: 35px !important;
+
+    .wpsms-chatbox__button-arrow {
+      display: block;
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &--rounded {
+    @include border-radius($base-spacing-unit);
+    padding: 14px 20px;
+  }
+
+  &--circle {
+    @include border-radius(50%);
+    padding: 8px;
+    width: 48px;
+    height: 48px;
+  }
+}
+.chatbox-open  .wpsms-chatbox__button-arrow{
+  transform: translateY(-50%)  ;
+}
