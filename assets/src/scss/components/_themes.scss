@@ -1,0 +1,22 @@
+@mixin theme($color,$color-hover) {
+  .wpsms-chatbox__button {
+    background: $color;
+    &:hover {
+      background: $color-hover;
+    }
+  }
+  .wpsms-chatbox__header, .wpsms-chatbox__team-icon {
+    background: $color;
+  }
+}
+@mixin theme-gradient($start,$end,$color-hover) {
+  .wpsms-chatbox__button {
+    background: linear-gradient(to bottom, $start, $end);
+    &:hover {
+      background: $color-hover;
+    }
+  }
+  .wpsms-chatbox__header, .wpsms-chatbox__team-icon {
+    background: linear-gradient(to bottom, $start, $end);
+  }
+}

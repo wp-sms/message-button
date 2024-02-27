@@ -1,34 +1,21 @@
 @mixin rtl-ltr($direction) {
   @if $direction == 'rtl' {
     direction: rtl;
-    font-family:$font-fa-ar;
-    line-height:21.91px ;
-    font-size:0.87rem;
-    .wpsms-chatbox__button{
-      line-height: 136%;
-    }
     .wpsms-chatbox__article span{
       transform: rotate(180deg);
     }
   } @else if $direction == 'ltr' {
     direction: ltr;
-    font-family: $font-en ;
-    font-size:1rem;
-    .wpsms-chatbox__button{
-      line-height: 117%;
-    }
   }
 }
 
 [dir="rtl"] {
-  .main,
   .wpsms-chatbox {
     @include rtl-ltr('rtl');
   }
 }
 
 [dir="ltr"] {
-  .main,
   .wpsms-chatbox {
     @include rtl-ltr('ltr');
   }
