@@ -28,9 +28,12 @@ $desktop-width: 1200px;
 $font-en: 'Roboto', sans-serif;
 $font-fa-ar: tahoma , arial , sans-serif;
 
-.dark-theme, .dark-mode {
-$color-orange: #F88E40;
-$color-orange-hover: #E07526;
-$color-blue: #0088CC;
-$color-blue-hover: #0077B3;
+:root {
+  --blue: #1e90ff;
+  --white: #ffffff;
+}
+
+.dark-theme {
+  --blue: #fff;
+  --white: #fff;
 }
