@@ -29,11 +29,11 @@ $font-en: 'Roboto', sans-serif;
 $font-fa-ar: tahoma , arial , sans-serif;
 
 :root {
-  --blue: #1e90ff;
+  --blue: $color-orange;
   --white: #ffffff;
 }
 
 .dark-theme {
-  --blue: #fff;
+  --blue: $color-orange-dark;
   --white: #fff;
 }
