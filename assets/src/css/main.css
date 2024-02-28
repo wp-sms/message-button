@@ -2,30 +2,30 @@
 ---------------------------------------------*/
 :root {
   --white: #ffffff;
-  --bobbles-title:#000000;
-  --chatbox__content:#F9FAFB;
-  --content-border:#E5E7EB;
-  --header-color:#fff;
-  --header-bg:#5B5B5B;
-  --chatbox-row:#F9FAFB;
-  --chatbox-row-hover:#F3F4F6;
-  --chatbox__content-color:#5C5C5C;
-  --font-family:'Roboto', sans-serif;
-  --font-size:1rem; }
+  --bobbles-title: #000000;
+  --chatbox-content: #F9FAFB;
+  --content-border: #E5E7EB;
+  --header-color: #fff;
+  --header-bg: #5B5B5B;
+  --chatbox-row: #fff;
+  --chatbox-row-hover: #F3F4F6;
+  --chatbox-content-color: #5C5C5C;
+  --font-family: 'Roboto', sans-serif;
+  --font-size: 1rem; }
 
 .dark-theme, .wpsms-chatbox--dark-theme {
-  --bobbles-title:#ECE5DD;
-  --chatbox__content:#0F0F0F;
-  --content-border:#272727;
-  --header-color:#ECE5DD;
-  --header-bg:#2C2C2C;
-  --chatbox-row:#121212;
-  --chatbox-row-hover:#1A1A1A;
-  --chatbox__content-color:#E0E0E0; }
+  --bobbles-title: #ECE5DD;
+  --chatbox-content: #0F0F0F;
+  --content-border: #272727;
+  --header-color: #ECE5DD;
+  --header-bg: #2C2C2C;
+  --chatbox-row: #121212;
+  --chatbox-row-hover: #1A1A1A;
+  --chatbox-content-color: #E0E0E0; }
 
 [dir="rtl"], .wpsms-chatbox--rtl {
-  --font-family: tahoma , arial , sans-serif;
-  --font-size:0.87rem; }
+  --font-family: tahoma, arial, sans-serif;
+  --font-size: 0.87rem; }
 
 /* Components
 --------------------------------------------- */
@@ -70,7 +70,7 @@
   max-width: 80%;
   position: fixed;
   bottom: 5rem;
-  background: var(--chatbox__content);
+  background: var(--chatbox-content);
   border-radius: 8px;
   overflow-x: hidden;
   max-height: 90vh;
@@ -101,17 +101,26 @@
 .wpsms-chatbox__content.closing {
   animation: fadeOut 0.5s ease; }
 
-.wpsms-chatbox__content:after {
-  content: '';
-  width: 18px;
-  height: 18px;
+.wpsms-chatbox__arrow {
+  background: transparent;
+  display: inline-block;
   position: fixed;
-  transform: rotate(45deg);
-  bottom: 4.5rem;
-  z-index: 9999999;
-  background: var(--chatbox__content);
-  border-bottom: var(--content-border) solid 1px;
-  border-right: var(--content-border) solid 1px; }
+  bottom: 61px;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-top: 10px solid var(--content-border);
+  border-right: 10px solid transparent; }
+  .wpsms-chatbox__arrow i {
+    display: inline-block;
+    position: absolute;
+    top: -10px;
+    left: -9px;
+    width: 0;
+    height: 0;
+    border-left: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+    border-top: 9px solid var(--chatbox-content);
+    border-right: 9px solid transparent; }
 
 .wpsms-chatbox__container {
   padding: 16px;
@@ -148,7 +157,7 @@
     flex-direction: row;
     align-items: center;
     border-top: 1px solid var(--content-border);
-    color: var(--chatbox__content-color); }
+    color: var(--chatbox-content-color); }
     .wpsms-chatbox__teams .wpsms-chatbox__team:hover {
       cursor: pointer;
       background: var(--chatbox-row-hover); }
@@ -198,7 +207,7 @@
 
 .wpsms-chatbox__articles {
   border: 1px solid var(--content-border);
-  background: var(--chatbox__content);
+  background: var(--chatbox-row);
   border-radius: 8px;
   overflow: hidden; }
   .wpsms-chatbox__articles ul {
@@ -210,14 +219,14 @@
     flex-direction: column; }
     .wpsms-chatbox__articles ul li {
       border-top: 1px solid var(--content-border);
-      color: var(--chatbox__content-color); }
+      color: var(--chatbox-content-color); }
       .wpsms-chatbox__articles ul li a {
         padding: 12px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-decoration: none;
-        color: var(--chatbox__content-color); }
+        color: var(--chatbox-content-color); }
       .wpsms-chatbox__articles ul li.wpsms-chatbox__articles-header {
         padding: 12px; }
       .wpsms-chatbox__articles ul li:first-child {
@@ -225,7 +234,7 @@
 
 .wpsms-chatbox__info {
   border-top: 1px solid var(--content-border);
-  color: var(--chatbox__content-color); }
+  color: var(--chatbox-content-color); }
   .wpsms-chatbox__info div {
     padding: 16px;
     font-size: 12px; }
@@ -241,7 +250,7 @@
     transform: rotate(180deg); }
   [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__content {
     right: 0.5rem; }
-  [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__content:after {
+  [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__arrow {
     right: 2rem; }
 
 [dir="ltr"] .wpsms-chatbox {
@@ -249,7 +258,7 @@
   left: 1rem; }
   [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__content {
     left: 0.5rem; }
-  [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__content:after {
+  [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__arrow {
     left: 2rem; }
 
 .wpsms-chatbox {
@@ -266,7 +275,7 @@
     left: 1rem; }
     .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__content {
       left: 0.5rem; }
-    .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__content:after {
+    .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__arrow {
       left: 2rem; }
   .wpsms-chatbox.wpsms-chatbox--rtl {
     direction: rtl;
@@ -275,7 +284,7 @@
       transform: rotate(180deg); }
     .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__content {
       right: 0.5rem; }
-    .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__content:after {
+    .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__arrow {
       right: 2rem; }
   .wpsms-chatbox.wpsms-chatbox--orange-theme .wpsms-chatbox__button {
     background: #F88E40; }

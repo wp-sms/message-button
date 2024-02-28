@@ -2,22 +2,22 @@
   @if $direction == 'rtl' {
     direction: rtl;
     right: 1rem;
-    .wpsms-chatbox__article span{
+    .wpsms-chatbox__article span {
       transform: rotate(180deg);
     }
-    .wpsms-chatbox__content{
+    .wpsms-chatbox__content {
       right: 0.5rem;
     }
-    .wpsms-chatbox__content:after{
+    .wpsms-chatbox__arrow {
       right: 2rem;
     }
   } @else if $direction == 'ltr' {
     direction: ltr;
     left: 1rem;
-    .wpsms-chatbox__content{
+    .wpsms-chatbox__content {
       left: 0.5rem;
     }
-    .wpsms-chatbox__content:after{
+    .wpsms-chatbox__arrow {
       left: 2rem;
     }
   }
