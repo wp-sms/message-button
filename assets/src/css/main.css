@@ -8,7 +8,7 @@
   --header-color:#fff;
   --header-bg:#5B5B5B;
   --chatbox-row:#F9FAFB;
-  --chatbox-row-even:#F3F4F6;
+  --chatbox-row-hover:#F3F4F6;
   --chatbox__content-color:#5C5C5C;
   --font-family:'Roboto', sans-serif;
   --font-size:1rem; }
@@ -20,7 +20,7 @@
   --header-color:#ECE5DD;
   --header-bg:#2C2C2C;
   --chatbox-row:#121212;
-  --chatbox-row-even:#1A1A1A;
+  --chatbox-row-hover:#1A1A1A;
   --chatbox__content-color:#E0E0E0; }
 
 [dir="rtl"], .wpsms-chatbox--rtl {
@@ -147,8 +147,9 @@
     align-items: center;
     border-top: 1px solid var(--content-border);
     color: var(--chatbox__content-color); }
-    .wpsms-chatbox__teams .wpsms-chatbox__team:nth-child(even) {
-      background: var(--chatbox-row-even); }
+    .wpsms-chatbox__teams .wpsms-chatbox__team:hover {
+      cursor: pointer;
+      background: var(--chatbox-row-hover); }
     .wpsms-chatbox__teams .wpsms-chatbox__team:first-child {
       border-top: 0 !important; }
   .wpsms-chatbox__teams .wpsms-chatbox__team-list {
