@@ -3,7 +3,6 @@
   max-width: 80%;
   position: fixed;
   bottom: 5rem;
-  right: 0.5rem;
   background:var(--chatbox__content);
   @include border-radius(8px);
   overflow-x: hidden;
@@ -49,7 +48,6 @@
   position: fixed;
   transform: rotate(45deg);
   bottom: 4.5rem;
-  right: 2rem;
   z-index: 9999999;
   background: var(--chatbox__content);
   border-bottom:var(--content-border) solid 1px;

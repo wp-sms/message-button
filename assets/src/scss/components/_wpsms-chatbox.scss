@@ -6,27 +6,19 @@
 .wpsms-chatbox{
   position: fixed;
   bottom: 1rem;
-  right: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   font-family:var(--font-family);
   font-size:var(--font-size);
+
    &.wpsms-chatbox--ltr {
     @include rtl-ltr('ltr');
   }
 
   &.wpsms-chatbox--rtl {
     @include rtl-ltr('rtl');
-  }
-
-  &.wpsms-chatbox--dark-theme {
-    @extend .dark-theme;
-  }
-
-  &.wpsms-chatbox--light-theme {
-    @extend .light-theme;
   }
 
   &.wpsms-chatbox--orange-theme {

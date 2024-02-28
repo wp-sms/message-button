@@ -16,24 +16,6 @@ $color__link: #4F7EF6;
 $color__link-visited: #4F7EF6;
 $color__link-hover: #3c66ce;
 
-$color__bobbles-title:#000000;
-$color__bobbles-title-dark:#ECE5DD;
-
-$color__chatbox__content:#F9FAFB;
-$color__chatbox__content-dark:#0F0F0F;
-$color__chatbox__content-border:#E5E7EB;
-$color__chatbox__content-border-dark:#272727;
-$color__chatbox__header:#fff;
-$color__chatbox__header-dark:#ECE5DD;
-$color__chatbox__header-bg-dark:#2C2C2C;
-
-$color__chatbox-row:#F9FAFB;
-$color__chatbox-row-dark:#121212;
-$color__chatbox-row-even:#F3F4F6;
-$color__chatbox-row-even-dark:#1A1A1A;
-
-$color__chatbox__content-color:#5C5C5C;
-$color__chatbox__content-color-dark: #E0E0E0;
 //structure
 $base-spacing-unit: 50px;
 
@@ -42,36 +24,34 @@ $tablet-width: 768px;
 $laptop-width: 992px;
 $desktop-width: 1200px;
 
-// typography
-$font-en: 'Roboto', sans-serif;
-$font-fa-ar: tahoma , arial , sans-serif;
+
 
 :root {
   --white: #ffffff;
-  --bobbles-title:$color__bobbles-title;
-  --chatbox__content:$color__chatbox__content;
-  --content-border:$color__chatbox__content-border;
-  --header-color:$color__chatbox__header;
-  --header-bg:$color-gray;
-  --chatbox-row:$color__chatbox-row;
-  --chatbox-row-even:$color__chatbox-row-even;
-  --chatbox__content-color:$color__chatbox__content-color;
-  --font-family:$font-en;
+  --bobbles-title:#000000;
+  --chatbox__content:#F9FAFB;
+  --content-border:#E5E7EB;
+  --header-color:#fff;
+  --header-bg:#5B5B5B;
+  --chatbox-row:#F9FAFB;
+  --chatbox-row-even:#F3F4F6;
+  --chatbox__content-color:#5C5C5C;
+  --font-family:'Roboto', sans-serif;
   --font-size:1rem;
  }
 
 .dark-theme ,.wpsms-chatbox--dark-theme {
-   --bobbles-title:$color__bobbles-title-dark;
-  --chatbox__content:$color__chatbox__content-dark;
-  --content-border:$color__chatbox__content-border-dark;
-  --header-color:$color__chatbox__header-dark;
-  --header-bg:$color__chatbox__header-bg-dark;
-  --chatbox-row:$color__chatbox-row-dark;
-  --chatbox-row-even:$color__chatbox-row-even-dark;
-  --chatbox__content-color:$color__chatbox__content-color-dark;
+   --bobbles-title:#ECE5DD;
+  --chatbox__content:#0F0F0F;
+  --content-border:#272727;
+  --header-color:#ECE5DD;
+  --header-bg:#2C2C2C;
+  --chatbox-row:#121212;
+  --chatbox-row-even:#1A1A1A;
+  --chatbox__content-color:#E0E0E0;
 }
 
 [dir="rtl"], .wpsms-chatbox--rtl{
-  --font-family:$font-fa-ar;
+  --font-family: tahoma , arial , sans-serif;
   --font-size:0.87rem;
 }
