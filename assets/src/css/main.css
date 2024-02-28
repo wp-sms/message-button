@@ -122,7 +122,6 @@
 .wpsms-chatbox__header {
   display: flex;
   color: var(--header-color);
-  background: var(--header-bg);
   justify-content: space-between;
   padding: 20px; }
   .wpsms-chatbox__header h2 {
@@ -133,6 +132,9 @@
     padding: 0;
     cursor: pointer;
     border: none; }
+
+.dark-theme .wpsms-chatbox__header, .wpsms-chatbox--dark-theme .wpsms-chatbox__header {
+  background: var(--header-bg) !important; }
 
 .wpsms-chatbox__teams {
   border: 1px solid var(--content-border);
