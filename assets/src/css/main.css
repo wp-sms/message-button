@@ -44,7 +44,8 @@
   .wpsms-chatbox__button-arrow {
     display: none; }
   .wpsms-chatbox__button-title {
-    margin: 0 .3rem; }
+    margin: 0 .3rem;
+    font-size: 1rem; }
   .wpsms-chatbox__button--has-arrow {
     padding-right: 35px !important; }
     .wpsms-chatbox__button--has-arrow .wpsms-chatbox__button-arrow {
@@ -67,18 +68,21 @@
 
 .wpsms-chatbox__content {
   width: 382px;
-  max-width: 80%;
+  max-width: 90%;
   position: fixed;
   bottom: 5rem;
   background: var(--chatbox-content);
   border-radius: 8px;
   overflow-x: hidden;
-  max-height: 90vh;
+  max-height: 80vh;
   overflow-y: auto;
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
   border: 1px solid var(--content-border); }
+  @media (min-width: 768px) {
+    .wpsms-chatbox__content {
+      max-height: 85vh; } }
   .wpsms-chatbox__content.open {
     display: block;
     opacity: 1; }
@@ -153,11 +157,14 @@
   .wpsms-chatbox__teams .wpsms-chatbox__team {
     padding: 15px;
     display: flex;
-    gap: 16px;
+    gap: 7px;
     flex-direction: row;
     align-items: center;
     border-top: 1px solid var(--content-border);
     color: var(--chatbox-content-color); }
+    @media (min-width: 548px) {
+      .wpsms-chatbox__teams .wpsms-chatbox__team {
+        gap: 16px; } }
     .wpsms-chatbox__teams .wpsms-chatbox__team:hover {
       cursor: pointer;
       background: var(--chatbox-row-hover); }
@@ -172,22 +179,27 @@
     gap: 4px; }
     .wpsms-chatbox__teams .wpsms-chatbox__team-list .wpsms-chatbox__team-item {
       font-size: 14px;
-      line-height: 16.41px; }
+      line-height: 16.41px;
+      word-break: break-word; }
       .wpsms-chatbox__teams .wpsms-chatbox__team-list .wpsms-chatbox__team-item.wpsms-chatbox__team-name {
         line-height: 18.75px;
-        font-size: 16px; }
+        text-transform: capitalize;
+        font-size: 1rem; }
       .wpsms-chatbox__teams .wpsms-chatbox__team-list .wpsms-chatbox__team-item.wpsms-chatbox__team-status {
         display: flex;
         align-items: center;
-        gap: 3px; }
-        .wpsms-chatbox__teams .wpsms-chatbox__team-list .wpsms-chatbox__team-item.wpsms-chatbox__team-status span {
+        gap: 3px;
+        font-size: 0.75rem;
+        line-height: 14.06px; }
+        .wpsms-chatbox__teams .wpsms-chatbox__team-list .wpsms-chatbox__team-item.wpsms-chatbox__team-status span.dot {
           width: 12px;
           height: 12px;
           border: 2px solid #F2F2F2;
           background: #94A3B8;
           display: inline-block;
-          border-radius: 50%; }
-          .wpsms-chatbox__teams .wpsms-chatbox__team-list .wpsms-chatbox__team-item.wpsms-chatbox__team-status span.online {
+          border-radius: 50%;
+          box-sizing: border-box; }
+          .wpsms-chatbox__teams .wpsms-chatbox__team-list .wpsms-chatbox__team-item.wpsms-chatbox__team-status span.dot.online {
             border: 2px solid #D1FAF5;
             background: #14B8A6; }
   .wpsms-chatbox__teams .wpsms-chatbox__team-avatar {
@@ -219,14 +231,18 @@
     flex-direction: column; }
     .wpsms-chatbox__articles ul li {
       border-top: 1px solid var(--content-border);
-      color: var(--chatbox-content-color); }
+      color: var(--chatbox-content-color);
+      font-size: 0.875rem; }
       .wpsms-chatbox__articles ul li a {
+        word-break: break-word;
         padding: 12px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         text-decoration: none;
-        color: var(--chatbox-content-color); }
+        color: var(--chatbox-content-color);
+        font-size: 0.87rem;
+        line-height: 16.8px; }
       .wpsms-chatbox__articles ul li.wpsms-chatbox__articles-header {
         padding: 12px; }
       .wpsms-chatbox__articles ul li:first-child {
@@ -234,7 +250,8 @@
 
 .wpsms-chatbox__info {
   border-top: 1px solid var(--content-border);
-  color: var(--chatbox-content-color); }
+  color: var(--chatbox-content-color);
+  line-height: 15px; }
   .wpsms-chatbox__info div {
     padding: 16px;
     font-size: 12px; }
@@ -247,7 +264,8 @@
   direction: rtl;
   right: 1rem; }
   [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__article span {
-    transform: rotate(180deg); }
+    transform: rotate(180deg);
+    margin-right: 5px; }
   [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__content {
     right: 0.5rem; }
   [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__arrow {
@@ -256,6 +274,8 @@
 [dir="ltr"] .wpsms-chatbox {
   direction: ltr;
   left: 1rem; }
+  [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__article span {
+    margin-left: 5px; }
   [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__content {
     left: 0.5rem; }
   [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__arrow {
@@ -273,6 +293,8 @@
   .wpsms-chatbox.wpsms-chatbox--ltr {
     direction: ltr;
     left: 1rem; }
+    .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__article span {
+      margin-left: 5px; }
     .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__content {
       left: 0.5rem; }
     .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__arrow {
@@ -281,7 +303,8 @@
     direction: rtl;
     right: 1rem; }
     .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__article span {
-      transform: rotate(180deg); }
+      transform: rotate(180deg);
+      margin-right: 5px; }
     .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__content {
       right: 0.5rem; }
     .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__arrow {
