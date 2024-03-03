@@ -4,16 +4,23 @@
     &:hover {
       background: $color-hover;
     }
+    &:active, &:focus  {
+      background: $color;
+    }
   }
   .wpsms-chatbox__header, .wpsms-chatbox__team-icon {
     background: $color;
   }
 }
-@mixin theme-gradient($start,$end,$color-hover) {
+@mixin theme-gradient($start,$end,$color-hover-start,$color-hover-end) {
+
   .wpsms-chatbox__button {
     background: linear-gradient(to bottom, $start, $end);
     &:hover {
-      background: $color-hover;
+      background: linear-gradient(to bottom, $color-hover-start, $color-hover-end);
+     }
+    &:active,&:focus {
+      background: linear-gradient(to bottom, $start, $end);
     }
   }
   .wpsms-chatbox__header, .wpsms-chatbox__team-icon {

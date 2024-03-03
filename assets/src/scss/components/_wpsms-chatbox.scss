@@ -5,7 +5,7 @@
 
 .wpsms-chatbox{
   position: fixed;
-  bottom: 1rem;
+  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,7 +34,6 @@
     @include theme($color-gray,$color-gray-hover);
   }
   &.wpsms-chatbox--blue-theme-gradient{
-    @include theme-gradient($gradient-blue-start,$gradient-blue-end,$gradient-blue-hover);
+    @include theme-gradient($gradient-blue-start,$gradient-blue-end,$gradient-blue-hover-start,$gradient-blue-hover-end);
   }
 }
-

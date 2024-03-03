@@ -1,3 +1,12 @@
+function  setChatBoxHeight(){
+    let windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    let windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    if(windowWidth>=768){
+        document.querySelector('.wpsms-chatbox__elements').style.maxHeight = (windowHeight * 0.65) + 'px';
+    }else{
+        document.querySelector('.wpsms-chatbox__elements').style.maxHeight = (windowHeight * 0.54) + 'px';
+    }
+}
 document.addEventListener('DOMContentLoaded', function () {
     const htmlElement = document.documentElement;
     const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -18,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (chatboxContent.classList.contains('open')) {
             chatboxContent.classList.remove('open');
             chatboxContent.classList.add('closing');
-        } else {
+          } else {
             chatboxContent.style.display = 'block'; // Show the content before animating
             chatboxContent.classList.add('open', 'opening');
         }
@@ -28,14 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
         chatboxContent.classList.remove('open');
         chatboxContent.classList.add('closing');
     });
-    // Reset animations and hide content on transition end
+
+    setChatBoxHeight();
+
     chatboxContent.addEventListener('transitionend', function (event) {
         if (event.propertyName === 'opacity' && !chatboxContent.classList.contains('open')) {
             chatboxContent.style.display = 'none';
         }
         chatboxContent.classList.remove('opening', 'closing');
     });
-
-
-
 });
+window.addEventListener('resize', setChatBoxHeight);

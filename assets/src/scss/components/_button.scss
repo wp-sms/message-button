@@ -7,6 +7,8 @@
   align-items: center;
   @extend .u-flex--center;
   @extend .u-bold;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
   z-index: 999;
   &-icon {
     width: 20px;

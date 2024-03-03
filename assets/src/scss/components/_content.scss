@@ -2,20 +2,13 @@
   width: 382px;
   max-width: 90%;
   position: fixed;
-  bottom: 5rem;
+  bottom: 6rem;
   background: var(--chatbox-content);
   @include border-radius(8px);
-  overflow-x: hidden;
-  max-height:80%;
-  overflow-y: auto;
-  @extend .u-custom-scrollbar;
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease;
   border: 1px solid var(--content-border);
-  @media(min-width: $tablet-width){
-    max-height: 85vh;
-  }
   &.open {
     display: block;
     opacity: 1;
@@ -30,7 +23,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -42,7 +34,7 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(20%);
+    transform: translateY(12%);
    }
   to {
     opacity: 1;
@@ -54,7 +46,7 @@
     transform: translateY(0);
   }
   to {
-    transform: translateY(50%);
+    transform: translateY(12%);
   }
 }
 
@@ -67,24 +59,33 @@
 }
 
 .wpsms-chatbox__content--slide.opening {
-  animation: slideUp 0.5s ease;
+  animation: slideUp 0.5s linear;
 }
 
 .wpsms-chatbox__content--slide.closing {
-  animation: slideDown 0.5s ease;
+  animation: slideDown 0.5s linear;
+}
+
+.wpsms-chatbox__elements{
+  max-height: 54vh;
+   overflow-y: auto;
+  overflow-x: hidden;
+  @extend .u-custom-scrollbar;
+  @media(min-width:$tablet-width){
+    max-height: 65vh;
+  }
 }
 
 .wpsms-chatbox__arrow {
   background: transparent;
   display: inline-block;
   position: fixed;
-  bottom: 61px;
+  bottom: 77px;
   border-left: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-top: 10px solid var(--content-border);
   border-right: 10px solid transparent;
-
-  i {
+   i {
     display: inline-block;
     position: absolute;
     top: -10px;
@@ -110,7 +111,8 @@
   color: var(--header-color);
   justify-content: space-between;
   padding: 20px;
-
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
   h2 {
     margin: 0;
     font-size: 1rem;
