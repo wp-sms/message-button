@@ -1,4 +1,4 @@
-# message-button
+# Message Button
 
 This project is a simple chat box with different themes implemented using Gulp, and SCSS.
 
