@@ -5,7 +5,8 @@ const sass = require('gulp-sass')(require('node-sass'));
 const imagemin = require("gulp-imagemin");
 const concat = require("gulp-concat");
 const cleanCSS = require("gulp-clean-css");
- const browserSync = require("browser-sync").create();
+const uglify = require("gulp-uglify");
+const browserSync = require("browser-sync").create();
 const series = gulp.series;
 const parallel = gulp.parallel;
 
@@ -25,6 +26,8 @@ const cssConcatTask = (cb) => {
         ])
         .pipe(concat("main.css"))
         .pipe(gulp.dest("assets/css"))
+        .pipe(cleanCSS({ compatibility: "ie11" }))
+        .pipe(gulp.dest("assets/css"))
         .pipe(browserSync.stream());
     cb();
 };
@@ -37,6 +40,13 @@ const cleanCssTask = (cb) => {
     cb();
 };
 
+const minifyJsTask = () => {
+    return gulp
+        .src(["./assets/js/main.js"])
+        .pipe(uglify())
+        .pipe(gulp.dest("assets/js"));
+};
+
 const concatMainJs = (cb) => {
     return gulp
         .src(["./assets/src/js/*.js" ])
@@ -45,11 +55,6 @@ const concatMainJs = (cb) => {
     cb();
 };
 
-exports.default = () =>
-    gulp
-        .src("assets/src/images/**/*")
-        .pipe(imagemin())
-        .pipe(gulp.dest("assets/images/dist"));
 
 const browserSyncTask = (cb) => {
     browserSync.init({
@@ -60,13 +65,13 @@ const browserSyncTask = (cb) => {
 
 const watchTask = () => {
     gulp.watch("./assets/src/scss/**/*.scss", series(sassTask, cssConcatTask));
-    gulp.watch("./assets/src/js/*.js", series(concatMainJs));
+    gulp.watch("./assets/src/js/*.js", series(concatMainJs,minifyJsTask));
 };
 
 exports.default = parallel(
     series(sassTask, cssConcatTask),
-    series(concatMainJs),
+    series(concatMainJs,minifyJsTask),
     series(browserSyncTask, watchTask)
 );
 
-exports.production = parallel(cleanCssTask);
+exports.production = parallel(cleanCssTask, minifyJsTask);
