@@ -7,7 +7,7 @@
   align-items: center;
   @extend .u-flex--center;
   @extend .u-bold;
-
+  z-index: 999;
   &-icon {
     width: 20px;
     height: 20px;

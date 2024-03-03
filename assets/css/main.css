@@ -35,7 +35,8 @@
   cursor: pointer;
   position: relative;
   display: flex;
-  align-items: center; }
+  align-items: center;
+  z-index: 999; }
   .wpsms-chatbox__button-icon {
     width: 20px;
     height: 20px; }
@@ -99,11 +100,31 @@
   to {
     opacity: 0; } }
 
-.wpsms-chatbox__content.opening {
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20%); }
+  to {
+    opacity: 1;
+    transform: translateY(0); } }
+
+@keyframes slideDown {
+  from {
+    transform: translateY(0); }
+  to {
+    transform: translateY(50%); } }
+
+.wpsms-chatbox__content--fade.opening {
   animation: fadeIn 0.5s ease; }
 
-.wpsms-chatbox__content.closing {
+.wpsms-chatbox__content--fade.closing {
   animation: fadeOut 0.5s ease; }
+
+.wpsms-chatbox__content--slide.opening {
+  animation: slideUp 0.5s ease; }
+
+.wpsms-chatbox__content--slide.closing {
+  animation: slideDown 0.5s ease; }
 
 .wpsms-chatbox__arrow {
   background: transparent;
