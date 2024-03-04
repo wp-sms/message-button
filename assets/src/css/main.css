@@ -166,7 +166,8 @@
   border-top-left-radius: 8px; }
   .wpsms-chatbox__header h2 {
     margin: 0;
-    font-size: 1rem; }
+    font-size: 1rem;
+    color: var(--header-color); }
   .wpsms-chatbox__header .wpsms-chatbox__close-button {
     background: transparent;
     padding: 0;

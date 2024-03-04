@@ -1,10 +1,13 @@
 function  setChatBoxHeight(){
-    let windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    let windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if(windowWidth>=768){
-        document.querySelector('.wpsms-chatbox__elements').style.maxHeight = (windowHeight * 0.65) + 'px';
-    }else{
-        document.querySelector('.wpsms-chatbox__elements').style.maxHeight = (windowHeight * 0.54) + 'px';
+    const chatboxElement = document.querySelector('.wpsms-chatbox__elements');
+    if (chatboxElement) {
+        let windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        let windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        if(windowWidth>=768){
+            chatboxElement.style.maxHeight = (windowHeight * 0.65) + 'px';
+        }else{
+            chatboxElement.style.maxHeight = (windowHeight * 0.54) + 'px';
+        }
     }
 }
 document.addEventListener('DOMContentLoaded', function () {
