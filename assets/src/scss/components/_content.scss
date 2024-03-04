@@ -117,6 +117,7 @@
     margin: 0;
     font-size: 1rem;
     color: var(--header-color);
+    font-family: var(--font-family);
   }
 
   .wpsms-chatbox__close-button {
@@ -174,7 +175,7 @@
       line-height: 16.41px;
       word-break: break-word;
       @extend .u-normal;
-
+      font-family: var(--font-family);
       &.wpsms-chatbox__team-name {
         line-height: 18.75px;
         text-transform: capitalize;
@@ -245,6 +246,7 @@
       color: var(--chatbox-content-color);
       font-size: 0.875rem;
       a {
+        font-family: var(--font-family);
         word-break: break-word;
         padding: 12px;
         display: flex;
@@ -259,6 +261,7 @@
       &.wpsms-chatbox__articles-header {
         padding: 12px;
         @extend .u-bold;
+        font-family: var(--font-family);
       }
 
       &:first-child {
