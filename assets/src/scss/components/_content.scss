@@ -145,6 +145,7 @@
     gap: 7px;
     flex-direction: row;
     align-items: center;
+    text-decoration: none;
     border-top: 1px solid var(--content-border);
     color: var(--chatbox-content-color);
     @media (min-width: $mobile-width) {
@@ -253,7 +254,7 @@
         color: var(--chatbox-content-color);
         font-size: 0.87rem;
         line-height: 16.8px;
-      }
+       }
 
       &.wpsms-chatbox__articles-header {
         padding: 12px;
