@@ -1,0 +1,57 @@
+// colors
+$color-orange: #F88E40;
+$color-orange-hover: #E07526;
+$color-blue: #0088CC;
+$color-blue-hover: #0077B3;
+$color-green: #25D366;
+$color-green-hover: #1DA056;
+$color-gray: #5B5B5B;
+$color-gray-hover: #8F8F8F;
+$color-light-gray: #ECE5DD;
+$gradient-blue-start: #00B2FF;
+$gradient-blue-end: #006AFF;
+$gradient-blue-hover-start: #008ECC;
+$gradient-blue-hover-end: #008ECC;
+
+$color__link: #4F7EF6;
+$color__link-visited: #4F7EF6;
+$color__link-hover: #3c66ce;
+
+//structure
+$base-spacing-unit: 50px;
+
+$mobile-width: 548px;
+$tablet-width: 768px;
+$laptop-width: 992px;
+$desktop-width: 1200px;
+
+
+:root {
+  --white: #ffffff;
+  --bobbles-title: #000000;
+  --chatbox-content: #F9FAFB;
+  --content-border: #E5E7EB;
+  --header-color: #fff;
+  --header-bg: #5B5B5B;
+  --chatbox-row: #fff;
+  --chatbox-row-hover: #F3F4F6;
+  --chatbox-content-color: #5C5C5C;
+  --font-family: 'Roboto', sans-serif;
+  --font-size: 1rem;
+}
+
+.dark-theme, .wpsms-chatbox--dark-theme {
+  --bobbles-title: #ECE5DD;
+  --chatbox-content: #0F0F0F;
+  --content-border: #272727;
+  --header-color: #ECE5DD;
+  --header-bg: #2C2C2C;
+  --chatbox-row: #121212;
+  --chatbox-row-hover: #1A1A1A;
+  --chatbox-content-color: #E0E0E0;
+}
+
+[dir="rtl"], .wpsms-chatbox--rtl {
+  --font-family: tahoma, arial, sans-serif;
+  --font-size: 0.87rem;
+}

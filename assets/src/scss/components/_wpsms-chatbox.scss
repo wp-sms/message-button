@@ -1,0 +1,39 @@
+@import "assets/src/scss/components/button";
+@import "assets/src/scss/components/content";
+@import "assets/src/scss/components/themes";
+@import "assets/src/scss/components/rtl-ltr";
+
+.wpsms-chatbox{
+  position: fixed;
+  bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family:var(--font-family);
+  font-size:var(--font-size);
+
+   &.wpsms-chatbox--ltr {
+    @include rtl-ltr('ltr');
+  }
+
+  &.wpsms-chatbox--rtl {
+    @include rtl-ltr('rtl');
+  }
+
+  &.wpsms-chatbox--orange-theme {
+    @include theme($color-orange,$color-orange-hover);
+  }
+  &.wpsms-chatbox--green-theme {
+    @include theme($color-green,$color-green-hover);
+  }
+  &.wpsms-chatbox--blue-theme {
+    @include theme($color-blue,$color-blue-hover);
+  }
+  &.wpsms-chatbox--gray-theme {
+    @include theme($color-gray,$color-gray-hover);
+  }
+  &.wpsms-chatbox--blue-theme-gradient{
+    @include theme-gradient($gradient-blue-start,$gradient-blue-end,$gradient-blue-hover-start,$gradient-blue-hover-end);
+  }
+}

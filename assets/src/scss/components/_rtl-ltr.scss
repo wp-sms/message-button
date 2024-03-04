@@ -1,0 +1,40 @@
+@mixin rtl-ltr($direction) {
+  @if $direction == 'rtl' {
+    direction: rtl;
+    right: 2rem;
+    .wpsms-chatbox__article span {
+      transform: rotate(180deg);
+       margin-right: 5px;
+    }
+    .wpsms-chatbox__content {
+      right: 1rem;
+    }
+    .wpsms-chatbox__arrow {
+      right: 2.5rem;
+    }
+  } @else if $direction == 'ltr' {
+    direction: ltr;
+    left: 2rem;
+    .wpsms-chatbox__article span {
+       margin-left: 5px;
+    }
+    .wpsms-chatbox__content {
+      left: 1rem;
+    }
+    .wpsms-chatbox__arrow {
+      left: 2.5rem;
+    }
+  }
+}
+
+[dir="rtl"] {
+  .wpsms-chatbox {
+    @include rtl-ltr('rtl');
+  }
+}
+
+[dir="ltr"] {
+  .wpsms-chatbox {
+    @include rtl-ltr('ltr');
+  }
+}

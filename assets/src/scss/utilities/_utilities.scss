@@ -1,0 +1,30 @@
+.u-flex {
+  display: flex;
+}
+
+.u-flex--column {
+  flex-direction: column;
+}
+
+.u-flex--center {
+  align-content: center;
+  justify-content: center;
+}
+
+.u-bold {
+  font-weight: 700;
+}
+.u-normal {
+  font-weight: 400;
+}
+.u-custom-scrollbar::-webkit-scrollbar {
+  width: 6px !important;
+}
+.u-custom-scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #D1D5DB;
+}
+.u-custom-scrollbar::-webkit-scrollbar-thumb {
+  background:  #a4a7ad;
+  border-radius: 10px;
+}
