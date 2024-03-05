@@ -293,26 +293,13 @@
       .wpsms-chatbox__info div a:hover {
         color: #3c66ce; }
 
-[dir="rtl"] .wpsms-chatbox {
+[dir="rtl"] .wpsms-chatbox, body.rtl .wpsms-chatbox {
   direction: rtl;
-  right: 2rem; }
-  [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__article span {
-    transform: rotate(180deg);
-    margin-right: 5px; }
-  [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__content {
-    right: 1rem; }
-  [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__arrow {
-    right: 2.5rem; }
+  text-align: right; }
 
-[dir="ltr"] .wpsms-chatbox {
+[dir="ltr"] .wpsms-chatbox, body.ltr .wpsms-chatbox {
   direction: ltr;
-  left: 2rem; }
-  [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__article span {
-    margin-left: 5px; }
-  [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__content {
-    left: 1rem; }
-  [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__arrow {
-    left: 2.5rem; }
+  text-align: left; }
 
 .wpsms-chatbox {
   position: fixed;
@@ -322,26 +309,14 @@
   justify-content: center;
   gap: 0.5rem;
   font-family: var(--font-family);
-  font-size: var(--font-size); }
+  font-size: var(--font-size);
+  z-index: 999; }
   .wpsms-chatbox.wpsms-chatbox--ltr {
     direction: ltr;
-    left: 2rem; }
-    .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__article span {
-      margin-left: 5px; }
-    .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__content {
-      left: 1rem; }
-    .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__arrow {
-      left: 2.5rem; }
+    text-align: left; }
   .wpsms-chatbox.wpsms-chatbox--rtl {
     direction: rtl;
-    right: 2rem; }
-    .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__article span {
-      transform: rotate(180deg);
-      margin-right: 5px; }
-    .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__content {
-      right: 1rem; }
-    .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__arrow {
-      right: 2.5rem; }
+    text-align: right; }
   .wpsms-chatbox.wpsms-chatbox--orange-theme .wpsms-chatbox__button {
     background: #F88E40; }
     .wpsms-chatbox.wpsms-chatbox--orange-theme .wpsms-chatbox__button:hover {
@@ -382,6 +357,23 @@
       background: linear-gradient(to bottom, #00B2FF, #006AFF); }
   .wpsms-chatbox.wpsms-chatbox--blue-theme-gradient .wpsms-chatbox__header, .wpsms-chatbox.wpsms-chatbox--blue-theme-gradient .wpsms-chatbox__team-icon {
     background: linear-gradient(to bottom, #00B2FF, #006AFF); }
+  .wpsms-chatbox.wpsms-chatbox--right-side {
+    right: 2rem; }
+    .wpsms-chatbox.wpsms-chatbox--right-side .wpsms-chatbox__article span {
+      transform: rotate(180deg);
+      margin-right: 5px; }
+    .wpsms-chatbox.wpsms-chatbox--right-side .wpsms-chatbox__content {
+      right: 1rem; }
+    .wpsms-chatbox.wpsms-chatbox--right-side .wpsms-chatbox__arrow {
+      right: 2.5rem; }
+  .wpsms-chatbox.wpsms-chatbox--left-side {
+    left: 2rem; }
+    .wpsms-chatbox.wpsms-chatbox--left-side .wpsms-chatbox__article span {
+      margin-left: 5px; }
+    .wpsms-chatbox.wpsms-chatbox--left-side .wpsms-chatbox__content {
+      left: 1rem; }
+    .wpsms-chatbox.wpsms-chatbox--left-side .wpsms-chatbox__arrow {
+      left: 2.5rem; }
 
 /* Utilities
 --------------------------------------------- */
