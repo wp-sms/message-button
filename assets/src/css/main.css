@@ -38,7 +38,7 @@
   align-items: center;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  z-index: 999; }
+  z-index: 10000; }
   .wpsms-chatbox__button-icon {
     width: 20px;
     height: 20px; }
@@ -310,7 +310,7 @@
   gap: 0.5rem;
   font-family: var(--font-family);
   font-size: var(--font-size);
-  z-index: 999; }
+  z-index: 9999; }
   .wpsms-chatbox.wpsms-chatbox--ltr {
     direction: ltr;
     text-align: left; }

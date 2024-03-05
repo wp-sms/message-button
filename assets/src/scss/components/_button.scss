@@ -9,7 +9,7 @@
   @extend .u-bold;
   user-select: none;
   -webkit-tap-highlight-color: transparent;
-  z-index: 999;
+  z-index: 10000;
   &-icon {
     width: 20px;
     height: 20px;
