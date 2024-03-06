@@ -304,4 +304,30 @@ span.wpsms-chatbox__team-icon img {
       }
     }
   }
+  div:first-child{
+    padding-bottom: 10px;
+  }
+  div.wpsms-chatbox__copy-right{
+    padding-top: 0;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 10.5px;
+    letter-spacing: -0.3px;
+    gap: 3px;
+    direction: ltr;
+     a,a:visited,a:hover,a:focus{
+      color: var(--copy-right-color);
+      text-decoration: none;
+    }
+    svg path{
+        fill:var(--copy-right-color)
+    }
+    &:hover {
+      svg path{
+        fill:var(--copy-right-color-hover)
+      }
+    }
+   }
 }

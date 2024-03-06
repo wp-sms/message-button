@@ -11,7 +11,9 @@
   --chatbox-row-hover: #F3F4F6;
   --chatbox-content-color: #5C5C5C;
   --font-family: 'Roboto', sans-serif;
-  --font-size: 1rem; }
+  --font-size: 1rem;
+  --copy-right-color: #5C5C5C ;
+  --copy-right-color-hover: #F88E40; }
 
 .dark-theme, .wpsms-chatbox--dark-theme {
   --bobbles-title: #ECE5DD;
@@ -21,7 +23,9 @@
   --header-bg: #2C2C2C;
   --chatbox-row: #121212;
   --chatbox-row-hover: #1A1A1A;
-  --chatbox-content-color: #E0E0E0; }
+  --chatbox-content-color: #E0E0E0;
+  --copy-right-color:#949494;
+  --copy-right-color-hover: #F88E40; }
 
 [dir="rtl"], .wpsms-chatbox--rtl {
   --font-family: tahoma, arial, sans-serif;
@@ -295,14 +299,37 @@ span.wpsms-chatbox__team-icon img {
       color: #4F7EF6; }
       .wpsms-chatbox__info div a:hover {
         color: #3c66ce; }
+  .wpsms-chatbox__info div:first-child {
+    padding-bottom: 10px; }
+  .wpsms-chatbox__info div.wpsms-chatbox__copy-right {
+    padding-top: 0;
+    display: flex;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 10.5px;
+    letter-spacing: -0.3px;
+    gap: 3px;
+    direction: ltr; }
+    .wpsms-chatbox__info div.wpsms-chatbox__copy-right a, .wpsms-chatbox__info div.wpsms-chatbox__copy-right a:visited, .wpsms-chatbox__info div.wpsms-chatbox__copy-right a:hover, .wpsms-chatbox__info div.wpsms-chatbox__copy-right a:focus {
+      color: var(--copy-right-color);
+      text-decoration: none; }
+    .wpsms-chatbox__info div.wpsms-chatbox__copy-right svg path {
+      fill: var(--copy-right-color); }
+    .wpsms-chatbox__info div.wpsms-chatbox__copy-right:hover svg path {
+      fill: var(--copy-right-color-hover); }
 
 [dir="rtl"] .wpsms-chatbox, body.rtl .wpsms-chatbox {
   direction: rtl;
   text-align: right; }
+  [dir="rtl"] .wpsms-chatbox .wpsms-chatbox__copy-right, body.rtl .wpsms-chatbox .wpsms-chatbox__copy-right {
+    justify-content: left; }
 
 [dir="ltr"] .wpsms-chatbox, body.ltr .wpsms-chatbox {
   direction: ltr;
   text-align: left; }
+  [dir="ltr"] .wpsms-chatbox .wpsms-chatbox__copy-right, body.ltr .wpsms-chatbox .wpsms-chatbox__copy-right {
+    justify-content: right; }
 
 .wpsms-chatbox {
   position: fixed;
@@ -317,9 +344,13 @@ span.wpsms-chatbox__team-icon img {
   .wpsms-chatbox.wpsms-chatbox--ltr {
     direction: ltr;
     text-align: left; }
+    .wpsms-chatbox.wpsms-chatbox--ltr .wpsms-chatbox__copy-right {
+      justify-content: right; }
   .wpsms-chatbox.wpsms-chatbox--rtl {
     direction: rtl;
     text-align: right; }
+    .wpsms-chatbox.wpsms-chatbox--rtl .wpsms-chatbox__copy-right {
+      justify-content: left; }
   .wpsms-chatbox.wpsms-chatbox--orange-theme .wpsms-chatbox__button {
     background: #F88E40; }
     .wpsms-chatbox.wpsms-chatbox--orange-theme .wpsms-chatbox__button:hover {

@@ -38,6 +38,8 @@ $desktop-width: 1200px;
   --chatbox-content-color: #5C5C5C;
   --font-family: 'Roboto', sans-serif;
   --font-size: 1rem;
+  --copy-right-color: #5C5C5C ;
+  --copy-right-color-hover: #F88E40;
 }
 
 .dark-theme, .wpsms-chatbox--dark-theme {
@@ -49,6 +51,8 @@ $desktop-width: 1200px;
   --chatbox-row: #121212;
   --chatbox-row-hover: #1A1A1A;
   --chatbox-content-color: #E0E0E0;
+  --copy-right-color:#949494;
+  --copy-right-color-hover: #F88E40;
 }
 
 [dir="rtl"], .wpsms-chatbox--rtl {

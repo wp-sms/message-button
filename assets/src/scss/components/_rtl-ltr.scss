@@ -2,9 +2,15 @@
   @if $direction == 'rtl' {
     direction: rtl;
     text-align: right;
+    .wpsms-chatbox__copy-right{
+      justify-content: left;
+    }
   } @else if $direction == 'ltr' {
     direction: ltr;
     text-align: left;
+    .wpsms-chatbox__copy-right{
+      justify-content: right;
+    }
   }
 }
 [dir="rtl"] ,body.rtl {
