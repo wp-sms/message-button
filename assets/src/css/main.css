@@ -248,6 +248,9 @@
     .wpsms-chatbox__teams .wpsms-chatbox__team-avatar .wpsms-chatbox__team-avatar-img {
       border-radius: 50%; }
 
+span.wpsms-chatbox__team-icon img {
+  width: 13px; }
+
 .wpsms-chatbox__articles {
   border: 1px solid var(--content-border);
   background: var(--chatbox-row);

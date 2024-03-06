@@ -9,6 +9,7 @@
   opacity: 0;
   transition: opacity 0.3s ease;
   border: 1px solid var(--content-border);
+
   &.open {
     display: block;
     opacity: 1;
@@ -23,6 +24,7 @@
     opacity: 1;
   }
 }
+
 @keyframes fadeOut {
   from {
     opacity: 1;
@@ -31,16 +33,18 @@
     opacity: 0;
   }
 }
+
 @keyframes slideUp {
   from {
     opacity: 0;
     transform: translateY(12%);
-   }
+  }
   to {
     opacity: 1;
     transform: translateY(0);
-   }
+  }
 }
+
 @keyframes slideDown {
   from {
     transform: translateY(0);
@@ -50,11 +54,11 @@
   }
 }
 
- .wpsms-chatbox__content--fade.opening {
+.wpsms-chatbox__content--fade.opening {
   animation: fadeIn 0.5s ease;
 }
 
- .wpsms-chatbox__content--fade.closing {
+.wpsms-chatbox__content--fade.closing {
   animation: fadeOut 0.5s ease;
 }
 
@@ -66,12 +70,12 @@
   animation: slideDown 0.5s linear;
 }
 
-.wpsms-chatbox__elements{
+.wpsms-chatbox__elements {
   max-height: 54vh;
-   overflow-y: auto;
+  overflow-y: auto;
   overflow-x: hidden;
   @extend .u-custom-scrollbar;
-  @media(min-width:$tablet-width){
+  @media(min-width: $tablet-width) {
     max-height: 65vh;
   }
 }
@@ -85,7 +89,8 @@
   border-bottom: 10px solid transparent;
   border-top: 10px solid var(--content-border);
   border-right: 10px solid transparent;
-   i {
+
+  i {
     display: inline-block;
     position: absolute;
     top: -10px;
@@ -113,6 +118,7 @@
   padding: 20px;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+
   h2 {
     margin: 0;
     font-size: 1rem;
@@ -152,6 +158,7 @@
     @media (min-width: $mobile-width) {
       gap: 16px;
     }
+
     &:hover {
       cursor: pointer;
       background: var(--chatbox-row-hover);
@@ -176,6 +183,7 @@
       word-break: break-word;
       @extend .u-normal;
       font-family: var(--font-family);
+
       &.wpsms-chatbox__team-name {
         line-height: 18.75px;
         text-transform: capitalize;
@@ -187,8 +195,9 @@
         display: flex;
         align-items: center;
         gap: 3px;
-        font-size:0.75rem ;
-        line-height:14.06px;
+        font-size: 0.75rem;
+        line-height: 14.06px;
+
         span.dot {
           width: 12px;
           height: 12px;
@@ -197,6 +206,7 @@
           display: inline-block;
           border-radius: 50%;
           box-sizing: border-box;
+
           &.online {
             border: 2px solid #D1FAF5;
             background: #14B8A6;
@@ -227,6 +237,10 @@
   }
 }
 
+span.wpsms-chatbox__team-icon img {
+  width: 13px;
+}
+
 .wpsms-chatbox__articles {
   border: 1px solid var(--content-border);
   background: var(--chatbox-row);
@@ -245,6 +259,7 @@
       border-top: 1px solid var(--content-border);
       color: var(--chatbox-content-color);
       font-size: 0.875rem;
+
       a {
         font-family: var(--font-family);
         word-break: break-word;
@@ -256,7 +271,7 @@
         color: var(--chatbox-content-color);
         font-size: 0.87rem;
         line-height: 16.8px;
-       }
+      }
 
       &.wpsms-chatbox__articles-header {
         padding: 12px;
@@ -275,6 +290,7 @@
   border-top: 1px solid var(--content-border);
   color: var(--chatbox-content-color);
   line-height: 15px;
+
   div {
     padding: 16px;
     font-size: 12px;
