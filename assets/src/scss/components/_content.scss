@@ -2,7 +2,7 @@
   width: 382px;
   max-width: 90%;
   position: fixed;
-  bottom: 6rem;
+  bottom: 96px;
   background: var(--chatbox-content);
   @include border-radius(8px);
   display: none;
@@ -121,7 +121,7 @@
 
   h2 {
     margin: 0;
-    font-size: 1rem;
+    font-size: 16px;
     color: var(--header-color);
     font-family: var(--font-family);
   }
@@ -187,7 +187,7 @@
       &.wpsms-chatbox__team-name {
         line-height: 18.75px;
         text-transform: capitalize;
-        font-size: 1rem;
+        font-size: 16px;
         @extend .u-bold;
       }
 
@@ -195,7 +195,7 @@
         display: flex;
         align-items: center;
         gap: 3px;
-        font-size: 0.75rem;
+        font-size:12px;
         line-height: 14.06px;
 
         span.dot {
@@ -269,7 +269,7 @@ span.wpsms-chatbox__team-icon img {
         align-items: center;
         text-decoration: none;
         color: var(--chatbox-content-color);
-        font-size: 0.87rem;
+        font-size: 14px;
         line-height: 16.8px;
       }
 
@@ -324,7 +324,7 @@ span.wpsms-chatbox__team-icon img {
     svg path{
         fill:var(--copy-right-color)
     }
-    &:hover {
+    a:hover {
       svg path{
         fill:var(--copy-right-color-hover)
       }
